@@ -1,0 +1,50 @@
+﻿@model Al_Maks.Models.Invoice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distributor.DistributorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distributor.DistributorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.OrderId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.OrderId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InvoiceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
